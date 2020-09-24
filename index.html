@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- <link rel="stylesheet" href="style.css"> -->
+        <link rel="stylesheet" href="style.css">
         <script src="app.js"></script>
         <title>Home|Chat shat</title>
         <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-app.js"></script>
@@ -25,27 +25,18 @@
     </head>
     <body>
     
-    <div class="chat">
+    <div class="chatApp">
+
+        <div id="users" class="users">
+
+        </div>
+        <!-- chat window where message of each person show  -->
         <div id="chat-window" class="chat-window">
     
-            <ul id="messages">
-    
-                <li class="msg">
-                    <span class="msg-span">
-                        <i class="name">Host:</i> Hello and welcome to the chat!
-                    </span>
-                </li>
+            <ul id="messages" class="messages">
+                
             </ul>
-    
-            <form action="sendMessage" submit="sendMessage" autocomplete="off" id="msgform">
-                <input type="text" id="msg-input" placeholder="enter message here">
-                <button id="msg-btn" type="submit"> Send </button>
-            </form>
-        </div>
     </div>
-    
-    
-    
     
     </body>
     </html>
