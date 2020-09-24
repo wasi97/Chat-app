@@ -1,51 +1,51 @@
 
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="style.css"> -->
-    <script src="app.js"></script>
-    <title>Home|Chat shat</title>
-    <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-database.js"></script>
-    <script>
-        // Your web app's Firebase configuration
-        var firebaseConfig = {
-          apiKey: "AIzaSyCFzbLJ9FtCSVqvMHbUw85nuZta2YS_PQg",
-          authDomain: "wasi-chat-shat.firebaseapp.com",
-          databaseURL: "https://wasi-chat-shat.firebaseio.com",
-          projectId: "wasi-chat-shat",
-          storageBucket: "wasi-chat-shat.appspot.com",
-          messagingSenderId: "953156612690",
-          appId: "1:953156612690:web:9f25dad74000e11d16a58b"
-        };
-        // Initialize Firebase
-        firebase.initializeApp(firebaseConfig);
-      </script>
-</head>
-<body>
-
-<div class="chat">
-    <div id="chat-window" class="chat-window">
-
-        <ul id="messages">
-
-            <li class="msg">
-                <span class="msg-span">
-                    <i class="name">Host:</i> Hello and welcome to the chat!
-                </span>
-            </li>
-        </ul>
-
-        <form submit="sendMessage" autocomplete="off" id="msgform">
-            <input type="text" id="msg-input" placeholder="enter message here">
-            <button id="msg-btn" type="submit"> Send </button>
-        </form>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- <link rel="stylesheet" href="style.css"> -->
+        <script src="app.js"></script>
+        <title>Home|Chat shat</title>
+        <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-database.js"></script>
+        <script>
+            // Your web app's Firebase configuration
+            var firebaseConfig = {
+              apiKey: "AIzaSyCFzbLJ9FtCSVqvMHbUw85nuZta2YS_PQg",
+              authDomain: "wasi-chat-shat.firebaseapp.com",
+              databaseURL: "https://wasi-chat-shat.firebaseio.com",
+              projectId: "wasi-chat-shat",
+              storageBucket: "wasi-chat-shat.appspot.com",
+              messagingSenderId: "953156612690",
+              appId: "1:953156612690:web:9f25dad74000e11d16a58b"
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+          </script>
+    </head>
+    <body>
+    
+    <div class="chat">
+        <div id="chat-window" class="chat-window">
+    
+            <ul id="messages">
+    
+                <li class="msg">
+                    <span class="msg-span">
+                        <i class="name">Host:</i> Hello and welcome to the chat!
+                    </span>
+                </li>
+            </ul>
+    
+            <form action="sendMessage" submit="sendMessage" autocomplete="off" id="msgform">
+                <input type="text" id="msg-input" placeholder="enter message here">
+                <button id="msg-btn" type="submit"> Send </button>
+            </form>
+        </div>
     </div>
-</div>
-
-
-
-
-</body>
-</html>
+    
+    
+    
+    
+    </body>
+    </html>
