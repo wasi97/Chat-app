@@ -3,11 +3,9 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
-        <script src="app.js"></script>
         <title>Home|Chat shat</title>
-        <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-app.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-database.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-database.js"></script>
         <script>
             // Your web app's Firebase configuration
             var firebaseConfig = {
@@ -17,33 +15,38 @@
               projectId: "wasi-chat-shat",
               storageBucket: "wasi-chat-shat.appspot.com",
               messagingSenderId: "953156612690",
-              appId: "1:953156612690:web:9f25dad74000e11d16a58b"
+              appId: "1:953156612690:web:4ae940950fe62a5d16a58b"
             };
             // Initialize Firebase
             firebase.initializeApp(firebaseConfig);
           </script>
+        
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
-    
-    <div class="chatApp">
-
-        <div id="login" class="login">
-
-            <input type="text" placeholder="Enter Name here">
-            <br><br>
-            <button id="signupBtn">Sign Up</button>
-
-        </div>
-        <div id="users" class="users hide">
-
-        </div>
-        <!-- chat window where message of each person show  -->
-        <div id="chat-window" class="chat-window hide">
-    
-            <ul id="messages" class="messages">
-
-            </ul>
-    </div>
-    
-    </body>
+        
+        <div class="chatApp">
+            
+            <div id="loginDiv" class="login">
+                
+                <input id="name" type="text" placeholder="Enter Name here">
+                <br><br>
+                <button id="signupBtn" onclick="signupdetails()">Sign Up</button>
+                
+            </div>
+            <div id="usersDiv" class="users hide">
+                <ul id="users" ></ul>
+            </div>
+            <!-- chat window where message of each person show  -->
+            <div id="chatWindow" class="chatWindow hide">
+                <input id="msg" type="text" placeholder="Enter message here"> <br><br>
+                <button id="msgbtn" onclick="sendmsg()">send</button>
+                <ul id="messages" class="messages">
+                    
+                </ul>
+            </div>
+            
+            
+            <script src="app.js"></script>
+        </body>
     </html>
