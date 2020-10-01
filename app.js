@@ -7,7 +7,7 @@ var loginDiv = document.getElementById("loginDiv")
 function signupdetails(){
     var name = document.getElementById("name")
     userName = {username: name.value}
-    // save data to database
+    // save SIGN UP data to database
     firebase.database().ref("/users").push(userName)
     loginDiv.classList.add("hide")
     userDiv.classList.remove("hide")
@@ -26,6 +26,7 @@ firebase.database().ref("/users").on("child_added",function(data){
     console.log(users)
     console.log(fetchedData)
 });
+// send messages
 var msg = document.getElementById("msg")
 var msgbtn = document.getElementById("msgbtn")
 
@@ -40,7 +41,15 @@ function sendmsg(){
     
 }
 
-
+// retrieve messages from database
+var msgBox = document.getElementById("messages")
+firebase.database().ref("/msgs/").on("child_added",function(data){
+    messages = data.val();
+    var li = document.createElement("li")
+    var retrievedMessages = document.createTextNode(messages)
+    li.appendChild(retrievedMessages)
+    msgBox.appendChild(li)
+})
 
 
 
