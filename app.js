@@ -9,22 +9,25 @@ function signupdetails(){
     userName = {username: name.value}
     // save SIGN UP data to database
     firebase.database().ref("/users").push(userName)
+    personalMsgRef = firebase.database().ref("/msgs/" + userName.username)
     loginDiv.classList.add("hide")
     userDiv.classList.remove("hide")
-    console.log("done")
+    
 };
+function 
+ console.log(personalMsgRef)
 var users = document.getElementById("users")
 var chatWindow = document.getElementById("chatWindow")
 // data load from database
 firebase.database().ref("/users").on("child_added",function(data){
-     fetchedData = data.val()
+    fetchedData = data.val()
     var li = document.createElement("li")
     var usersName = document.createTextNode(fetchedData.username)
     li.appendChild(usersName)
     users.appendChild(li)
     users.addEventListener("click",chatbox)
-    console.log(users)
-    console.log(fetchedData)
+    
+    
 });
 // send messages
 var msg = document.getElementById("msg")
@@ -37,7 +40,7 @@ function chatbox(){
 
 function sendmsg(){
     firebase.database().ref("msgs/").push(msg.value)
-    console.log(msg.value)
+    msg.value = ""
     
 }
 
